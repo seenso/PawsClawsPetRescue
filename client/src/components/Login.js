@@ -68,7 +68,8 @@ export default function Login({ setCurrentUser, portal, setPortal }) {
           type="submit" 
         >Sign in</Button> 
         <p id="linkSignUpInstead">
-            <a href="/homeportal/signup">sign up instead?</a>
+          Wrong form?
+            <a href="/homeportal/signup"> sign up here</a>
         </p>
       </form>
     </div>
