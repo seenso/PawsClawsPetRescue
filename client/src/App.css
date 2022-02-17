@@ -9,7 +9,7 @@
   margin-left: 10px;
   margin-right: 10px;
 }
-.navbar, #footer, .pageName {
+.navbar, .pageName {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,14 +74,14 @@ tr:hover {
   border-radius: 25px;
   opacity: 0.9;
 }
-#signupForm {
+#signupForm, #fosterSignUpForm, #adminSignUpForm {
   padding: 45px;
   margin: 90px;
   background-color: white;
   border-radius: 25px;
   opacity: 0.9;
 }
-#applicant_signup {
+#applicant_signup, #admin_signup, #foster_signup {
   width: 73%;
   height: 60rem;
   background-image: url(http://localhost:4000/images/signupImg.jpg);

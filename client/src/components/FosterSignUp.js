@@ -68,7 +68,7 @@ export default function FosterSignUp({ fosters, setFosters, setCurrentUser, setP
   return (
       <div id="foster_signup" className="rescueportal">
         <Modal.Body>
-          <Form onSubmit={(e)=> handleFosterSignUp(e)}>
+          <Form onSubmit={(e)=> handleFosterSignUp(e)} id="fosterSignUpForm">
             <h3>Foster Signup!</h3>
             <Row className="mb-3">
               <Form.Group as={Col} controlId="formGridFirstName">
@@ -105,9 +105,9 @@ export default function FosterSignUp({ fosters, setFosters, setCurrentUser, setP
             <Button variant="primary" type="submit">
               Submit
             </Button>
-            <p className="forgot-password text-right">
+            {/* <p className="forgot-password text-right">
             Already registered? <a href="/rescueportal/login">Log in</a>
-            </p>
+            </p> */}
           </Form>
         </Modal.Body>
       </div>

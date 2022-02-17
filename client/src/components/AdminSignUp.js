@@ -43,10 +43,10 @@ function handleAdminSignUp(e) {
 
 
   return (
-      <div id="applicant_signup" className="rescueportal">
+      <div id="admin_signup" className="rescueportal">
         <br/>
         <Modal.Body>
-          <Form onSubmit={(e)=> handleAdminSignUp(e)}>
+          <Form onSubmit={(e)=> handleAdminSignUp(e)} id="adminSignUpForm">
             <h3>Admin Signup!</h3>
             <Row className="mb-3">
               <Form.Group as={Col} controlId="formGridFirstName">
@@ -83,9 +83,9 @@ function handleAdminSignUp(e) {
             <Button variant="primary" type="submit">
               Submit
             </Button>
-            <p className="forgot-password text-right">
+            {/* <p className="forgot-password text-right">
             Already registered? <a href="/rescueportal/login">Log in</a>
-            </p>
+            </p> */}
           </Form>
         </Modal.Body>
       </div>

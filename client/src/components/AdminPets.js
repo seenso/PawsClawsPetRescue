@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import Table from 'react-bootstrap/Table';
+
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Row from 'react-bootstrap/Row';
@@ -320,16 +320,20 @@ export default function AdminPets({ pets, setPets, fosters, setFosters, petFoste
       petObj["description"] = e.target[15].value;
     } 
 
+    console.log("e.target[16].value", typeof e.target[16].value, e.target[16].value)
+    console.log("petToUpdate.status", typeof petToUpdate.status, petToUpdate.status)
     if (e.target[16].value === "") {
       petObj["status"] = petToUpdate.status;
+      console.log("THE SAME?")
     } else if(e.target[16].value !== petToUpdate.status) {
       petObj["status"] = e.target[16].value;
+      console.log("NOT THE SAME")
     } 
 
     // pet_foster
     let newFosterID = parseInt(e.target[17].value.split(" ")[1])
     let fosterToUpdate = petToUpdate.pet_foster[0].foster_id;
-
+    
     if(newFosterID !== fosterToUpdate) {
       fetch(`/pet_fosters/${petToUpdate.pet_foster[0].id}`,{
         method: "PATCH",
