@@ -1,65 +1,119 @@
+* {
+  color: #424242
+}
 .logo {
-  height: 95px;
+  height: 100px;
+}
+.footerLogo {
+  height: 70px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.navbar, .pageName {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.navbar {
-  border-style: solid;
+.table {
   width: 83%;
-  margin-left: 6%;
+}
+.dataTable, .dataRow {
+  border: 1px solid #424242;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.dataTableHeader {
+  background-color: lightgray;
+  border: 1px solid #424242;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+tr:hover {
+  background-color: #df8c5549 !important;
 }
 
-.home_adoptablepets {
-  padding: 15px 0px;
+#home_infocards {
+  margin: 20px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.adoptablePets {
+  height: auto;
+  width: 74%;
+  margin: auto;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 .home_infocards {
-  padding: 15px 0px;
+  padding: 10px 0px;
+}
+
+.pet {
+  padding: 5px;
+}
+
+.rescueportal {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+}
+
+#loginForm {
+  padding: 45px;
+  margin: 60px;
+  background-color: white;
+  border-radius: 25px;
+  opacity: 0.9;
+}
+#signupForm, #fosterSignUpForm, #adminSignUpForm {
+  padding: 45px;
+  margin: 90px;
+  background-color: white;
+  border-radius: 25px;
+  opacity: 0.9;
+}
+#applicant_signup, #admin_signup, #foster_signup {
+  width: 73%;
+  height: 60rem;
+  background-image: url(http://localhost:4000/images/signupImg.jpg);
+  background-size: cover;
+  padding: 80px;
+  margin: auto; /*top right bottom left*/
+  display: flex;
+  align-items: center;
+}
+#login {
+  width: 73%;
+  height: 50rem;
+  background-image: url(http://localhost:4000/images/loginImg.jpg);
+  /* center center/cover no-repeat local; */
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* margin: auto; top right bottom left */
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+#loginErrors {
+  color: red;
 }
 
 #footer {
-  position: fixed;
   left: 0;
   bottom: 0;
-  width: 100%;
+  width: 100%; 
   text-align: center;
-
+  height: 5em;
+  position: static;
 }
-
-/* .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */

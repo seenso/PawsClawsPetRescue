@@ -1,11 +1,11 @@
 require 'faker'
 
 puts "Destroying existing data...."
-Foster.destroy_all
-Pet.destroy_all
-PetFoster.destroy_all
-Meetup.destroy_all
-Applicant.destroy_all
+# Foster.destroy_all
+# Pet.destroy_all
+# PetFoster.destroy_all
+# Meetup.destroy_all
+# Applicant.destroy_all
 PetApplication.destroy_all
 # Admin.destroy_all
 
@@ -37,7 +37,7 @@ puts "♥ Fosters created!"
 p1 = Pet.create!(
   name: "Sis", 
   status: "Available", 
-  image: "./images/dog_sis.jpg",
+  image: "http://localhost:4000/images/dog_sis.jpg",
   species: "Dog", 
   breed: "Shepherd/Husky Mix", 
   age: "1-2 years old", 
@@ -60,7 +60,7 @@ p1 = Pet.create!(
 p2 = Pet.create!(
   name: "Koda", 
   status: "Available", 
-  image: "./images/cat_koda.jpg",
+  image: "http://localhost:4000/images/cat_koda.jpg",
   species: "Cat", 
   breed: "Tuxedo Shorthair", 
   age: "1", 
@@ -83,7 +83,7 @@ p2 = Pet.create!(
 p3 = Pet.create!(
   name: "Spice", 
   status: "Available", 
-  image: "./images/cat_spice.jpg",
+  image: "http://localhost:4000/images/cat_spice.jpg",
   species: "Cat", 
   breed: "Domestic Shorthair", 
   age: "3", 
@@ -106,7 +106,7 @@ p3 = Pet.create!(
 p4 = Pet.create!(
   name: "Lucy", 
   status: "Available", 
-  image: "./images/dog_lucy.jpg",
+  image: "http://localhost:4000/images/dog_lucy.jpg",
   species: "Dog", 
   breed: "Husky mix", 
   age: "2-3 years old", 
@@ -153,50 +153,51 @@ pf4 = PetFoster.create!(
 puts "♥ Pet_fosters created!"
 
 # applicants
-a1 = Applicant.create!(
-  first_name: "Cassandra", 
-  last_name: "McGinley", 
-  dob: "07/20/1990", 
-  email: "cmcginley@email.com", 
-  phone: Faker::PhoneNumber.cell_phone, 
-  rent_own: "Own", 
-  home_type: "Home", 
-  length_address: "4 years", 
-  yard_description: "about .25 acres and 6 ft cedar fencing", 
-  children: "one 12 years old", 
-  pet_allergy: "no", 
-  lifestyle: "we love to go hiking! my husband goes for a 2 mile run every morning.", 
-  approved: false
-)
+# a1 = Applicant.create!(
+#   firstName: "Cassandra", 
+#   lastName: "McGinley", 
+#   dob: "07/20/1990", 
+#   email: "cmcginley@email.com", 
+#   phone: Faker::PhoneNumber.cell_phone, 
+#   rent_own: "Own", 
+#   home_type: "Home", 
+#   length_address: "4 years", 
+#   yard_description: "about .25 acres and 6 ft cedar fencing", 
+#   children: "one 12 years old", 
+#   pet_allergy: "no", 
+#   lifestyle: "we love to go hiking! my husband goes for a 2 mile run every morning.", 
+#   approved: false,
+#   user_id: 9999
+# )
 
-puts "♥ Applicants created!"
+# puts "♥ Applicants created!"
 
 # meetups
-m1 = Meetup.create!(
-  date: "3/1/2022",
-  time: "5:30PM",
-  location: "#{Faker::Address.street_address}, Anchorage, AK 99507",
-  reason: "meet & greet",
-  pet_id: p1.id,
-  foster_id: f1.id, 
-  applicant_id: a1.id
-)
+# m1 = Meetup.create!(
+#   date: "3/1/2022",
+#   time: "5:30PM",
+#   location: "#{Faker::Address.street_address}, Anchorage, AK 99507",
+#   reason: "meet & greet",
+#   pet_id: p1.id,
+#   foster_id: f1.id, 
+#   applicant_id: a1.id
+# )
 
-puts "♥ Meetups created!"
+# puts "♥ Meetups created!"
 
 # pet_applications
-pa1 = PetApplication.create!(
-  pet_id: p1.id,
-  applicant_id: a1.id,
-  status: "Approved",
-)
-pa2 = PetApplication.create!(
-  pet_id: p4.id,
-  applicant_id: a1.id,
-  status: "Approved"
-)
+# pa1 = PetApplication.create!(
+#   pet_id: p1.id,
+#   applicant_id: a1.id,
+#   status: "Approved",
+# )
+# pa2 = PetApplication.create!(
+#   pet_id: p4.id,
+#   applicant_id: a1.id,
+#   status: "Approved"
+# )
 
-puts "♥ Pet_applications created!"
+# puts "♥ Pet_applications created!"
 
 # admins
 # Admin.create!(first_name: "Seen", last_name: "So", email: "seen@email.com")

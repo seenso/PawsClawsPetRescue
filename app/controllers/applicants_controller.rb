@@ -2,7 +2,7 @@ class ApplicantsController < ApplicationController
 
   # GET /applicants
   def index
-    render json: Applicant.all 
+    render json: Applicant.all.order(:id)
   end
 
   # GET /applicants/:id
@@ -35,7 +35,7 @@ class ApplicantsController < ApplicationController
   private
 
   def applicant_params
-    params.permit(:first_name, :last_name, :dob, :email, :phone, :rent_own, :home_type, :length_address, :yard_description, :children, :pet_allergy, :lifestyle, :approved)
+    params.permit(:firstName, :lastName, :dob, :email, :phone, :rent_own, :home_type, :length_address, :yard_description, :children, :pet_allergy, :lifestyle, :approved, :user_id)
   end
 
   def find_applicant
