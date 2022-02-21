@@ -116,9 +116,7 @@ export default function ApplicantSignUp({ setCurrentUser, setPortal }) {
         })
       }
     })
-
   }
-
 
   return (
       <div id="applicant_signup">
