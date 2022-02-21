@@ -23,7 +23,6 @@ export default function Pet({ pet, currentUser }) {
   }
 
   function handleAdoptRequest() {
-    // console.log("HANDLE ADOPT REQUEST IN PET.JS", pet, currentUser)
     fetch("/pet_applications", {
       method: "POST", 
       headers: {"Content-Type": "application/json"},
@@ -64,9 +63,6 @@ export default function Pet({ pet, currentUser }) {
         </ListGroup>
 
         <>
-          {/* <Button variant="primary" onClick={handleShow}>
-            More details
-          </Button> */}
 
           <Modal show={show} onHide={handleClose}>
             <Modal.Header>
