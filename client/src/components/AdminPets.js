@@ -9,12 +9,9 @@ import Form from 'react-bootstrap/Form';
 export default function AdminPets({ pets, setPets, fosters, setFosters, petFosters, setPetFosters }) {
   const [showAddPet, setShowAddPet] = useState(false);
   const [showEditPet, setShowEditPet] = useState(false);
-  // const [newFoster, setNewFoster] = useState();
   const [petToUpdate, setPetToUpdate] = useState({id: "", name: "", status: "", image: "", species: "", breed: "", age: "", height: "", weight: "", fixed: "", energy_level: "", coat_type: "", coat_color: "", good_w_kids: "", good_w_cats: "", behavioral_issues: "", description: "", rabies_vaccine: "",FVRCP_vaccine: "", distemper_parvo_vaccine: "", dewormed: "", pet_foster: [], foster: []});
 
   function addPet(e) {
-    // e.preventDefault();
-
     fetch("/pets", {
       method: "POST",
       headers: {"Content-Type": "application/json"},
@@ -133,24 +130,17 @@ export default function AdminPets({ pets, setPets, fosters, setFosters, petFoste
 
             <Row className="mb-3">
               <Form.Group as={Col} controlId="formGridAge">
-                {/* <Form.Label>Good with Kids?</Form.Label>
-                <Form.Control type="string" placeholder="Enter age" /> */}
                 <Form.Check type="checkbox" label="Good with kids?" />
               </Form.Group>
 
               <Form.Group as={Col} controlId="formGridHeight">
-                {/* <Form.Label>Good with Cats?</Form.Label> */}
                 <Form.Check type="checkbox" label="Good with cats?" />
               </Form.Group>
 
               <Form.Group as={Col} controlId="formGridWeight">
-                {/* <Form.Label>Any Behavior Issues?</Form.Label>
-                <Form.Control type="string" placeholder="Enter coat color(s)" /> */}
                 <Form.Check type="checkbox" label="Any Behavior Issues?" />
               </Form.Group>
-            {/* </Row>
 
-            <Row className="mb-3"> */}
               <Form.Group as={Col} controlId="formGridDewormed">
                 <Form.Check type="checkbox" label="Dewormed?" />
               </Form.Group>
@@ -190,9 +180,6 @@ export default function AdminPets({ pets, setPets, fosters, setFosters, petFoste
             </Button>
           </Form>
         </Modal.Body>
-        {/* <Modal.Footer>
-          <Button onClick={props.onHide}>Close</Button>
-        </Modal.Footer> */}
       </Modal>
     );
   }
@@ -401,7 +388,6 @@ export default function AdminPets({ pets, setPets, fosters, setFosters, petFoste
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          {/* <h4>Centered Modal</h4> */}
           <Form onSubmit={(e)=>{editPet(e)}}>
             <Row className="mb-3">
               <Form.Group as={Col} controlId="formGridName">
@@ -445,7 +431,6 @@ export default function AdminPets({ pets, setPets, fosters, setFosters, petFoste
             <Row className="mb-3">
               <Form.Group as={Col} controlId="formGridAge">
                 <Form.Label>Energy Level</Form.Label>
-                {/* <Form.Control type="string" placeholder={petToUpdate.energy_level} /> */}
                 <Form.Select>
                   <option>{petToUpdate.energy_level}</option>
                   <option>Couch potato</option>
@@ -581,9 +566,6 @@ export default function AdminPets({ pets, setPets, fosters, setFosters, petFoste
             </Button>
           </Form>
         </Modal.Body>
-        {/* <Modal.Footer>
-          <Button onClick={props.onHide}>Close</Button>
-        </Modal.Footer> */}
       </Modal>
     );
   }
@@ -596,7 +578,6 @@ export default function AdminPets({ pets, setPets, fosters, setFosters, petFoste
   return (
     <div id="admin_pets">
       <h3 className="pageName">Rescue Pets</h3>
-      {/* <> */}
         <div class="text-center">
           <Button 
             onClick={() => setShowAddPet(true)}
@@ -612,11 +593,9 @@ export default function AdminPets({ pets, setPets, fosters, setFosters, petFoste
             onHide={() => setShowAddPet(false)}
             />
         </div>
-      {/* </> */}
 
       <div style={{overflowX: "auto", width: "83%", marginLeft: "auto", marginRight: "auto"}}>
         <table className="dataTable">
-          {/* <thead> */}
             <tr className="dataTableHeader">
               <th className="dataTableHeader">Edit</th>
               <th className="dataTableHeader">ID</th>
@@ -640,8 +619,6 @@ export default function AdminPets({ pets, setPets, fosters, setFosters, petFoste
               <th className="dataTableHeader">Distemper/Parvo Vaccine</th>
               <th className="dataTableHeader">Dewormed?</th>
             </tr>
-          {/* </thead> */}
-          {/* <tbody> */}
             {pets.map(pet => (
               <tr key={pet.id} className="dataTable"> 
                 <td className="dataTable">
@@ -681,7 +658,6 @@ export default function AdminPets({ pets, setPets, fosters, setFosters, petFoste
                 <td className="dataTable">{pet.dewormed ? "Yes" : "No"}</td>
               </tr>
             ))}
-          {/* </tbody> */}
         </table>
       </div>
     </div>

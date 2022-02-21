@@ -87,9 +87,7 @@ export default function AdminApplications({ applications, setApplications }) {
   return (
     <div id="admin_applications">
       <h3 className="pageName">Pet Applications</h3>
-      {/* <div> */}
       <table className="dataTable">
-        {/* <thead> */}
           <tr className="dataTableHeader">
             <th className="dataTableHeader">Edit</th>
             <th className="dataTableHeader">id</th>
@@ -98,8 +96,6 @@ export default function AdminApplications({ applications, setApplications }) {
             <th className="dataTableHeader">Applicant</th>
             <th className="dataTableHeader">Applicant Approved?</th>
           </tr>
-        {/* </thead> */}
-        {/* <tbody> */}
           {applications.map(a => (
             <tr key={a.id} className="dataTable">
               <td className="dataTable">
@@ -122,9 +118,7 @@ export default function AdminApplications({ applications, setApplications }) {
               <td className="dataTable">{a.applicant.approved ? "Yes" : "No"}</td>
             </tr>
           ))}
-        {/* </tbody> */}
       </table>
-      {/* </div> */}
     </div>
   )
 }
