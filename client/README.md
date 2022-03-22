@@ -1,3 +1,14 @@
+# Pending deliverables
+
+- Give foster/admin ability to create calendar events.
+- Admin should be able to see all calendar events.
+- Pets should display any current calendar events.
+
+- Pets should hold health record files.
+
+-------------------------------------------------
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
