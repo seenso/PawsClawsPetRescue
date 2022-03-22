@@ -46,42 +46,30 @@ function App() {
       }
     })
   }, [])
-  // set pets
+  // set states
   useEffect(() => {
     fetch("/pets")
     .then(r=>r.json())
     .then(pets => setPets(pets))
-  }, [])
-  // set users
-  useEffect(() => {
+
     fetch("/users")
     .then(r=>r.json())
     .then(users => setUsers(users))
-  }, [])
-  // set fosters
-  useEffect(() => {
+
     fetch("/fosters")
     .then(r=>r.json())
     .then(fosters => setFosters(fosters))
-  }, [])
-  // set applicants
-  useEffect(() => {
-    fetch("/applicants")
-    .then(r=>r.json())
-    .then(applicants => setApplicants(applicants))
-  }, [])
-  // set applications from pet_applications
-  useEffect(() => {
+
     fetch("/pet_applications")
     .then(r=>r.json())
     .then(apps => setApplications(apps))
-  }, [])
-  // set applications from pet_fosters
-  useEffect(() => {
+
     fetch("/pet_fosters")
     .then(r=>r.json())
     .then(petFosters => setPetFosters(petFosters))
+
   }, [])
+
   //logout user
   function handleLogOut() {
     //reset portal and current User
