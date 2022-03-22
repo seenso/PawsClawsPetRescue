@@ -21,7 +21,7 @@ export default function Footer() {
       <Button
         class="btn btn-large"
         style={{ backgroundColor: "#f4805c", color: "white", fontWeight: "bold", "fontSize":"14px"}}
-        href="https://github.com/seenso/PawsClaws"
+        href="https://github.com/seenso/PawsClawsPetRescue"
       >
         Github Repo
       </Button>
